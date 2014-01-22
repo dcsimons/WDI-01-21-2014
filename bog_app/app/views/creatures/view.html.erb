@@ -1,0 +1,21 @@
+<h1>List of All Bog Creatures</h1>
+
+<% if @creatures.nil? %>
+	<p>No bog creatures in database.</p>
+<% else %>
+
+	<% @creatures.each do |creature| %>
+		<div>
+			<a href="/creatures/<%= creature.id %>">
+			Bog Creature Name: <%= creature[:name] %><br>
+			Bog Creature Description: <%= creature[:description] %>
+			</a>
+		</div><br>
+	<% end %>
+<% end %>
+
+<div>
+	<button><a href="/">HOME</a></button>
+	<button><a href="/creatures/new">CREATE NEW CREATURE</a></button>
+	<button><a href="/creatures/view">VIEW ALL CREATURES</a></button>
+</div>

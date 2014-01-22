@@ -1,0 +1,13 @@
+<div>
+	Bog Creature Name: <%= @creature.name %><br>
+	Bog Creature Description: <%= @creature.description %>
+</div><br>
+
+<div>
+	<button><a href="/">HOME</a></button>
+	<button><a href="/creatures/new">CREATE NEW CREATURE</a></button>
+	<button><a href="/creatures/<%= @creature.id %>/edit">EDIT CREATURE</a></button>
+	<button><a href="/creatures/<%= @creature.id %>/delete">DELETE CREATURE</a></button>
+	<button><a href="/creatures/view">VIEW ALL CREATURES</a></button>
+</div>
+
